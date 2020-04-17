@@ -1,0 +1,32 @@
+
+********************************************* [ KEY_AB ] *********************************************
+
+
+_______ 1. QUANTIZATION _______
+
+Responder string length before reconciliation: 26
+Initiator string length before reconciliation: 26
+Key stings are not equal and they need reconciliation (cascade)
+
+_______ 2. CASCADE _______
+
+Mismatches number =  6
+bit error rate (probability) Pe: 0.23076923076923078
+basic block size:  6 
+
+---Cascade Statistics---
+There were  6  errors found and corrected:
+There obs Error Rate:  0.23076923076923078
+The total number of disclosed bits is  16
+They are equal now
+Initial_Shared_Key --- of length 26 is:
+ [0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+_______ 3. PRIVACY AMPLIFICATION _______
+
+_finalLength:  8
+Final_Shared_Key --- of length 128 is:
+ [1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0]
+Final_Shared_Key_bit_string --- of length 128 is:
+ 10101111011110010101010110011111111111010001111100010111111010000101001110001111100010000001000000111101101011101111100011011100
+Final_Shared_Key_Dec_AB = 233244903862674439146537406319138109660
