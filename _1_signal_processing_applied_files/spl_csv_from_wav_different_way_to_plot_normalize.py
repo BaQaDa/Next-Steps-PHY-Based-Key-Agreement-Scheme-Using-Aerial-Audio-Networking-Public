@@ -147,8 +147,8 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
         ax1.text(100, 0.5, r'Key obtained at ($A$,$B$) = %d' %Final_Shared_Key_Dec_AB, fontsize=7, fontweight='light')
 
         ax2.plot(df_Alice_norm_amp_step.reset_index(drop=True), color='darkred', label='B -> A', linewidth=1.0, linestyle='-')
-        # ax2.plot(df_Eve_norm_amp_step.reset_index(drop=True), color='forestgreen', label='A -> E', linewidth=1.0, linestyle='--')
-        # ax2.text(100, 0.5, r'Key inferred at ($E$) = %d' %Final_Shared_Key_Dec_AE, fontsize=7, fontweight='light')
+        ax2.plot(df_Eve_norm_amp_step.reset_index(drop=True), color='forestgreen', label='A -> E', linewidth=1.0, linestyle='--')
+        ax2.text(100, 0.5, r'Key inferred at ($E$) = %d' %Final_Shared_Key_Dec_AE, fontsize=7, fontweight='light')
 
         ##-------------------------------------------------------------------------------------------------------------
         # ax1.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
@@ -190,11 +190,12 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
 '''_____________________________________________________ Run _____________________________________________________'''
 
 if (__name__) == "__main__":
-    input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Conference\\conf2"
+    # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Conference\\conf2"
     # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Corridor"
     # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Locality"
     # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\room-multi-freq"
 
+    input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\Conference\\conf2-restudy"
     start_freq, freq_num, freq_gap = 16000, 1, 0
     lowcut, highcut = start_freq - 10, start_freq + ((freq_num - 1) * freq_gap) + 10
     filter_order = 4
