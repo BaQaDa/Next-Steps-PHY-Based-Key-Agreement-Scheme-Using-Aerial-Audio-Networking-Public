@@ -84,7 +84,7 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
         ax.yaxis.set_ticks_position('both')
         ax.xaxis.set_ticks_position('both')
         ax.tick_params(direction='in')
-        plt.xlabel('Time [ms]')
+        plt.xlabel('Time [msec]')
         plt.ylabel('SPL [pascal]')
         plt.savefig(image_room_range,  bbox_inches='tight')
 
@@ -151,7 +151,7 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
 if (__name__) == "__main__":
     # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Conference"
     # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Corridor"
-    input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Locality"
+    input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\Locality"
     # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\room-multi-freq"
 
     start_freq, freq_num, freq_gap = 16000, 1, 0

@@ -113,8 +113,8 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
         df_Bob_norm_amp = normalize(df_Bob['Amp'], 0, 20)
         df_Eve_norm_amp = normalize(df_Eve['Amp'], 0, 20)
 
-        plt.plot(df_Alice_norm_amp.reset_index(drop=True), color='darkred', label='B -> A', linewidth=1.0, linestyle='-')
-        plt.plot(df_Bob_norm_amp.reset_index(drop=True), color='darkblue', label='A -> B', linewidth=1.0, linestyle='--')
+        plt.plot(df_Alice_norm_amp.reset_index(drop=True), color='darkred', label='Tx2 -> Rx2', linewidth=1.0, linestyle='-')
+        plt.plot(df_Bob_norm_amp.reset_index(drop=True), color='darkblue', label='Rx2 -> Tx2', linewidth=1.0, linestyle='--')
         # plt.plot(df_Eve_norm_amp.reset_index(drop=True), color='forestgreen', label='A -> E', linewidth=1.0, linestyle='-.')
 
         plt.legend()
@@ -137,14 +137,18 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
         # Final_Shared_Key_Dec_AB_bit_string = '10001111101010100101000101110100001111111110001111010011011100110110101110111101001010010100010101000111010110101111110000011001'
         # Final_Shared_Key_Dec_AE_bit_string = '01101000001000101000010110000011111110101101011111101101011001000101111111010010001011101100101111011100111110011111100000101100'
 
-        Final_Shared_Key_Dec_AB = 190963945948611618290326215408750361625
+        # Final_Shared_Key_Dec_AB = 240225049246642651722999240578559649321
+        Final_Shared_Key_Dec_AB = 79791884210741572035837849920862200905
+
         Final_Shared_Key_Dec_AE = 102363648286154459468633706935384406060
 
         f2, (ax1, ax2) = plt.subplots(2, 1, sharex=True)
 
-        ax1.plot(df_Alice_norm_amp_step.reset_index(drop=True), color='darkred', label='B -> A', linewidth=1.0, linestyle='-')
-        ax1.plot(df_Bob_norm_amp_step.reset_index(drop=True), color='darkblue', label='A -> B', linewidth=1.0, linestyle='--')
-        ax1.text(100, 0.5, r'Key obtained at ($A$,$B$) = %d' %Final_Shared_Key_Dec_AB, fontsize=7, fontweight='light')
+        ax1.plot(df_Alice_norm_amp_step.reset_index(drop=True), color='darkred', label='Tx1 -> Rx1', linewidth=1.0, linestyle='-')
+        ax1.plot(df_Bob_norm_amp_step.reset_index(drop=True), color='darkblue', label='Rx1 -> Tx1', linewidth=1.0, linestyle='--')
+        # ax1.text(100, 0.5, r'Key obtained at ($A$,$B$) = %d' %Final_Shared_Key_Dec_AB, fontsize=7, fontweight='light')
+        ax1.text(100, 0.5, r'$Key_{x1}$ = %d' %Final_Shared_Key_Dec_AB, fontsize=7, fontweight='light')
+
 
         ax2.plot(df_Alice_norm_amp_step.reset_index(drop=True), color='darkred', label='B -> A', linewidth=1.0, linestyle='-')
         # ax2.plot(df_Eve_norm_amp_step.reset_index(drop=True), color='forestgreen', label='A -> E', linewidth=1.0, linestyle='--')
@@ -156,7 +160,7 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
         # ax2.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
         #            ncol=2, mode="expand", borderaxespad=0.)
 
-        ax1.legend(loc=2)
+        ax1.legend(loc=1)
         ax2.legend(loc=2)
 
 
@@ -170,8 +174,8 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
         ax2.tick_params(direction='in')
 
         # ax2.text(0.05, 0.5, 'SPL [pascal]', va='center', rotation='vertical',  size=9)
-        ax2.set_xlabel('Time [ms]')
-        ax2.set_ylabel('SPL [pascal]')
+        ax1.set_xlabel('Time [ms]')
+        ax1.set_ylabel('SPL [pascal]')
 
         f2.savefig(image_spl_step,  bbox_inches='tight')
 
@@ -194,11 +198,16 @@ if (__name__) == "__main__":
     # input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\Conference\\conf2-restudy"
     # start_freq, freq_num, freq_gap = 16000, 1, 0
 
-    input_path = "C:\\Users\\Dania\\Desktop\\New folder (2)"
+    # input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.1.gather projects-2devices"
+    input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.3.gather projects-4devices\\1stPair"
+    # input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.3.gather projects-4devices\\2ndPairData"
+
     start_freq, freq_num, freq_gap = 15450, 1, 0
 
+    # lowcut, highcut = start_freq - 550, 18010
+
     lowcut, highcut = start_freq - 10, start_freq + ((freq_num - 1) * freq_gap) + 10
-    filter_order = 4
+    filter_order = 3
     numOfRounds = 1
     do_filter ='True'
 

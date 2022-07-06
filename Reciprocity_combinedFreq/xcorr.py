@@ -6,7 +6,7 @@ from _0_signal_processing_functions.band_pass_filter import butter_bandpass_filt
 from pylab import *
 from scipy.io import wavfile
 
-input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\room-multi-freq"
+input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\room-multi-freq"
 
 spl_output_path = input_path
 

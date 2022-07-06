@@ -116,7 +116,7 @@ def spectrum_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_ga
         ax1.yaxis.set_ticks_position('both')
         ax1.xaxis.set_ticks_position('both')
         ax1.tick_params(direction='in')
-        ax1.set_xlabel('Frequency [KHz]')
+        ax1.set_xlabel('Frequency [kHz]')
         ax1.set_title('A -> B')
         ax1.plot(freqs[int(len(freqs)/8):int(freqs.size / 3.5)], fftabs_norm[int(len(freqs)/8):int(freqs.size / 3.5)], linewidth=0.8, color='black')
 
@@ -179,12 +179,14 @@ def spectrum_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_ga
 
 
 if (__name__) == "__main__":
-    input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\room-multi-freq"
+    # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\room-multi-freq"
+    input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\room-multi-freq"
+
 
     start_freq, freq_num, freq_gap = 8000, 15, 250
     lowcut, highcut = start_freq - 10, start_freq + ((freq_num - 1) * freq_gap) + 10
     filter_order = 4
-    numOfRounds = 2
+    numOfRounds = 4
     do_filter = 'True'
 
     spectrum_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lowcut, highcut, filter_order, do_filter)

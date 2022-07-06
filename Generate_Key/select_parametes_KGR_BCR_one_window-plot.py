@@ -8,7 +8,9 @@ from Generate_Key.run_file_get_keys import finalLength, _securityParameter
 if (__name__) == "__main__":
 
     # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\impTest"
-    input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Conference\\conf2"
+    # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Conference\\conf2"
+    input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\Conference\\conf2"
+
     start_freq, freq_num, freq_gap = 16000, 1, 0
     first_file_num = 1
     last_file_num = first_file_num + 1
@@ -36,7 +38,7 @@ if (__name__) == "__main__":
     ax1.xaxis.set_ticks_position('both')
     ax2.xaxis.set_ticks_position('both')
 
-    ax1.set_ylabel('Key Generation Rate [bit/sec]')
+    ax1.set_ylabel('Key Generation Rate [bps]')
     ax2.set_ylabel('Bit Conflict Rate')
     ax2.set_xlabel('chunk-size')
 

@@ -26,7 +26,7 @@ def get_magnitude_spectrum(sampFreq, samples, scale, plot_title, write_spectrum_
     # plt.xlim([10, sampFreq / 2])
     # plt.xscale('log')
     fig = plt.figure()
-    fig.text(0.575, 0.045, '[KHz]', va='center', rotation='horizontal', size=10)
+    fig.text(0.575, 0.045, '[kHz]', va='center', rotation='horizontal', size=10)
     ax = fig.add_subplot(111)
     scale_x = 1e3
     # locator = matplotlib.ticker.MaxNLocator(24)
@@ -88,11 +88,23 @@ if __name__ == '__main__':
     '''Change this number in file_name = str(num)'''
 
     start_freq, freq_num, freq_gap = 0, 1, 0
-    input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\AmbientNoise"
+    # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\AmbientNoise"
+    input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\AmbientNoise"
+
     # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\Conference"
 
 
-    for i in range (1,4):
+    # for i in range (1,4):
+    #
+    #     check_noise_spectrum(i, input_path, 'Eve', start_freq, freq_num, freq_gap)
+    #
+    # plt.savefig("ambient-noise", dpi=1000)
+    # show()
 
-        check_noise_spectrum(i, input_path, 'Eve', start_freq, freq_num, freq_gap)
+
+    # For thesis and defense presentation
+
+    check_noise_spectrum(2, input_path, 'Eve', start_freq, freq_num, freq_gap)
+
+    plt.savefig("ambient-noise", dpi=1000)
     show()

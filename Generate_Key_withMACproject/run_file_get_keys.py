@@ -56,10 +56,12 @@ if (__name__) == "__main__":
     # start_freq, freq_num, freq_gap = 16000, 1, 0
     # chunk_size, step_size, alpha = 40, 1000, 0.2   # 80, 1000, 0.7
 
+    # input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.1.gather projects-2devices"
+    # input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.3.gather projects-4devices\\1stPair"
+    input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.3.gather projects-4devices\\2ndPairData"
 
-    path = "C:\\Users\\Dania\\Desktop\\New folder (2)"
     start_freq, freq_num, freq_gap = 15450, 1, 0
-    chunk_size, step_size, alpha = 35, 1000, 0.2   # 80, 1000, 0.7
+    chunk_size, step_size, alpha = 45, 1000, 0.2   # 80, 1000, 0.7
 
     first_file_num = 1
     last_file_num = first_file_num + 1
@@ -77,7 +79,7 @@ if (__name__) == "__main__":
 
         print('\n_______ 1. QUANTIZATION _______\n')
 
-        cleaned_qts_resp, cleaned_qts_init = quantization(path, first_file_num, last_file_num, 'Alice', 'Bob',
+        cleaned_qts_resp, cleaned_qts_init = quantization(input_path, first_file_num, last_file_num, 'Alice', 'Bob',
                                                           step_size, chunk_size, alpha,
                                                           start_freq, freq_num, freq_gap)
 
@@ -150,7 +152,7 @@ if (__name__) == "__main__":
 
         print('\n_______ 1. QUANTIZATION _______\n')
 
-        cleaned_qts_resp, cleaned_qts_init = quantization(path, first_file_num, last_file_num, 'Alice', 'Eve',
+        cleaned_qts_resp, cleaned_qts_init = quantization(input_path, first_file_num, last_file_num, 'Alice', 'Eve',
                                                           step_size, chunk_size, alpha,
                                                           start_freq, freq_num, freq_gap)
 

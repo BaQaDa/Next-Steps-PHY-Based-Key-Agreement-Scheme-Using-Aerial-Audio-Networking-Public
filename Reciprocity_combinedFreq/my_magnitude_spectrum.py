@@ -17,7 +17,9 @@ if __name__ == '__main__':
 
     '''Original Received Signal
        ------------------------'''
-    input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\16000-room-2000amp"
+    # input_path = "D:\\India-\\Ph.D\\3rd sem\\projects1\\python\\Exps_paper\\16000-room-2000amp"
+    input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\16000-room-2000amp"
+
     input_file = os.path.join(input_path, file_name + '.wav')
     output_path = input_path
 
@@ -59,6 +61,6 @@ if __name__ == '__main__':
     # plt.xlim([10, samplerate / 2])
     # plt.xscale('log')
     # plt.grid(True)
-    plt.xlabel('Frequency [KHz]')
+    plt.xlabel('Frequency [kHz]')
     plt.plot(freqs[:int(freqs.size / 2)], fftabs[:int(freqs.size / 2)]/1e4)
     plt.show()

@@ -22,15 +22,15 @@ def plot_signal(samplerate, samples, plot_title):
 
 
 if __name__ == '__main__':
-    file_name = '1Alice14000-1-0'
+    file_name = '1Alice15450-1-0'
     # file_name = '1Bob14000-1-0'
+    input_path = "C:\\Users\\Dania\\Desktop\\New folder (2)"
+    start_freq, freq_num, freq_gap = 15450, 1, 0
 
-
-    input_path = "C:\\Users\\Dania\\Desktop"
     input_file = os.path.join(input_path, file_name + '.wav')
 
     sampFreq, samples = wavfile.read(input_file)
-    plot_signal(sampFreq, samples, 'Received Signal')
+    plot_signal(sampFreq, samples, '1Alice15450-1-0')
 
 
     show()

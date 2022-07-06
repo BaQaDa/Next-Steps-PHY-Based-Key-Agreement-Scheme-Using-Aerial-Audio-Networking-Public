@@ -170,10 +170,12 @@ def spl_csv_from_wav(input_path, numOfRounds, start_freq, freq_num, freq_gap, lo
         ax2.tick_params(direction='in')
 
         # ax2.text(0.05, 0.5, 'SPL [pascal]', va='center', rotation='vertical',  size=9)
-        ax2.set_xlabel('Time [ms]')
+        ax2.set_xlabel('Time [msec]')
         ax2.set_ylabel('SPL [pascal]')
+        ax1.set_ylabel('SPL [pascal]')
 
-        f2.savefig(image_spl_step,  bbox_inches='tight')
+        f2.savefig(image_spl_step,  bbox_inches='tight', dpi=1000)
+        f2.savefig("1-16000-1-0-spl-step", dpi=1000)
 
     '''____________________ Plot concatenated step SPL ____________________'''
 

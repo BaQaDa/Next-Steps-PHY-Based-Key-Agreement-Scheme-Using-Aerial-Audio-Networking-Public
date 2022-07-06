@@ -10,7 +10,11 @@ if (__name__) == "__main__":
     # input_path = "D:\\India-\\Ph.D\\3 project 1\\3rd sem\\projects1\\python\\Exps_paper\\Conference\\conf2-restudy"
     # start_freq, freq_num, freq_gap = 16000, 1, 0
 
-    input_path = "C:\\Users\\Dania\\Desktop\\New folder (2)"
+    # input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.1.gather projects-2devices"
+    # input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.3.gather projects-4devices\\1stPair"
+    input_path = "D:\\India-\\Ph.D\\5 project 2\\7-experiments\\4.3.gather projects-4devices\\2ndPairData"
+
+
     start_freq, freq_num, freq_gap = 15450, 1, 0
 
     first_file_num = 1
@@ -21,7 +25,7 @@ if (__name__) == "__main__":
         freq_gap) + '-KGR-BCR-Vs-chunkSize'
     image3 = os.path.join(output_path, image_name3 + '.png')
 
-    chunk_size_values = [i for i in np.arange(5, 55, 5)]
+    chunk_size_values = [i for i in np.arange(5, 60, 5)]
     alpha_values = [i for i in np.arange(0.2, 1.0, 0.2)]
     marker = itertools.cycle(('.', 'h', 's', 'd'))
     Pe_values1 = list()
