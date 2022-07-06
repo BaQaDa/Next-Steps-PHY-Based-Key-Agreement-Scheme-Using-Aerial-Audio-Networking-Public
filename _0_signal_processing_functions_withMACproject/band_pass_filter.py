@@ -43,7 +43,7 @@ if __name__ == '__main__':
     file_name = '1Bob15450-1-0'
 
     input_path = "C:\\Users\\Dania\\Desktop\\New folder (2)"
-    path
+
     start_freq, freq_num, freq_gap = 15450, 1, 0
 
     input_file = os.path.join(input_path, file_name + '.wav')
