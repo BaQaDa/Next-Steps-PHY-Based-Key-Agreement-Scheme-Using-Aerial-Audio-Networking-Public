@@ -34,8 +34,8 @@ The entities considered for the experiments are: Two smartphones are set as the 
 
 ##	Folders' contents
 Here we briefly describe the main `.py` scripts presented in the repository. 
-
-###`Generate_Key`
+ 
+### `Generate_Key`
 
 The folder contains `.py` scripts related to the authentication procedure.
 1.	 `select_parameters_KGR_BCR_one_window-plot.py`:
@@ -46,10 +46,10 @@ Uses the `.py` scripts in (quantize_reconcile_amplify_privacy) folder.
 The input to this file is the audio files recorded by the entities included in the experiment, and the parameters’ selected values.  The `run_file_get_keys.py` performs the three post-processing steps for each of the pairs (A and B) and (A and E). The results are K_AB between the legitimate end-parties (A and B) and the key K_AE that the eavesdropper E would infer on running the same key agreement process. The shared key K_AB obtained at the legitimate end-parties, A and B, is different from the key K_AE inferred by E.
 
 
-###`quantize_reconcile_amplify_privacy`
+### `quantize_reconcile_amplify_privacy`
 This folder contains `.py` scripts related to the post-processing steps: 1. Chunk-Wise Quantisation, 2. Cascade Based Information Reconciliation, 3. Privacy Amplification. 
 
-###`_0_signal_processing_functions`
+### `_0_signal_processing_functions`
 ### `_1_signal_processing_applied_files`
 These folders contain some `.py`  files with auxiliary functions used by the different algorithms. Some of these functions are related to signal processing, plotting signals, and checking for features as ambient noise, locality property. 
 
