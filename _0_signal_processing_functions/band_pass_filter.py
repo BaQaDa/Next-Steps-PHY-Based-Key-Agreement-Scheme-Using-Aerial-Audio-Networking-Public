@@ -19,6 +19,16 @@ def butter_bandpass(lowcut, highcut, fs, order=5):
     b, a = butter(order, [low, high], btype='band')
     return b, a
 
+def plot_signal(samplerate, samples, plot_title):
+    timeArray = arange(0, len(samples), 1)
+    timeArray = timeArray / samplerate
+    timeArray = timeArray * 1000  # scale to milliseconds
+    plt.figure(figsize=(6, 4))
+    plt.plot(timeArray, samples, 'y')
+    plt.grid(True)
+    plt.title(plot_title)
+    plt.xlabel('Time [ms]')
+    plt.ylabel('Amplitude')
 
 def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
     b, a = butter_bandpass(lowcut, highcut, fs, order=order)
@@ -45,5 +55,7 @@ if __name__ == '__main__':
 
     filtered_samples = butter_bandpass_filter(samples, lowcut, highcut, sampFreq, order=3)
     get_magnitude_spectrum(sampFreq, filtered_samples, 'linear', 'Filtered Signal Spectrum', True, spectrum_output_file)
+
+    plot_signal(sampFreq, filtered_samples, file_name)
 
     show()
