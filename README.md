@@ -1,7 +1,7 @@
 # Post-processing algorithms for PHY-Based Key Agreement Scheme Using Aerial Audio Networking
 
 ##  General description
-This project is based on the research work done as part of PhD Thesis. This part is titled under ìPHY-Based Key Agreement Scheme Using Aerial Audio Networkingî, where we propose a physical layer security based solution that exploits the physical characteristics of the wireless channel in general, and the attractive features of the audio channel as an appealing technique to be used as a user-friendly, room-contained key agreement scheme, to generate a secret key between two smartphones that are located in the same room. 
+This project is based on the research work done as part of PhD Thesis. This part is titled under ‚ÄúPHY-Based Key Agreement Scheme Using Aerial Audio Networking‚Äù, where we propose a physical layer security based solution that exploits the physical characteristics of the wireless channel in general, and the attractive features of the audio channel as an appealing technique to be used as a user-friendly, room-contained key agreement scheme, to generate a secret key between two smartphones that are located in the same room. 
 
 For more details and better understanding of the project and its goals, the reader is referred to the original paper:
 
@@ -23,7 +23,7 @@ Our Proposed Audio Networking PHY-Based Key Agreement contains the following ste
 4.	Privacy Amplification
 
 The first step (Audio Channel Probing and Measurements Extraction) is implemented in an Android Application that can
- be found in our repository (https://github.com/BaQaDa/PowerProfile2). 
+ be found in our repository (https://github.com/BaQaDa/First-Step-PHY-Based-Key-Agreement-Scheme-Using-Aerial-Audio-Networking/blob/master/README.md). 
 
 While the remaining steps are implemented in Python, as shown in the current repository. The
  repository contains our implementation of the next steps (Chunk-Wise Quantisation, Cascade Based Information Reconciliation, Privacy Amplification) used for the post-processing procedure of the PHY Based Key Agreement Scheme using Audio Networking. Additionally, the repository contains an analysis of some main properties of audio networking that influence the design of the proposed key agreement system such as ambient noise, and locality property.
@@ -43,7 +43,7 @@ The input to this file is the audio files recorded by the entities included in t
 The file plots the different values of Key Generation Rate (KGR) and Bit Conflict Rate (BCR) that our system can achieve for varying chunk-size at various values of alpha parameters. Based on the graphs we select the proper parameter values to obtain high KGR while maintaining the BCR as small as possible. The selected values are then manually entered in the `run_file_get_keys.py` file.
 2.	`run_file_get_keys.py`:
 Uses the `.py` scripts in (quantize_reconcile_amplify_privacy) folder.
-The input to this file is the audio files recorded by the entities included in the experiment, and the parametersí selected values.  The `run_file_get_keys.py` performs the three post-processing steps for each of the pairs (A and B) and (A and E). The results are K_AB between the legitimate end-parties (A and B) and the key K_AE that the eavesdropper E would infer on running the same key agreement process. The shared key K_AB obtained at the legitimate end-parties, A and B, is different from the key K_AE inferred by E.
+The input to this file is the audio files recorded by the entities included in the experiment, and the parameters‚Äô selected values.  The `run_file_get_keys.py` performs the three post-processing steps for each of the pairs (A and B) and (A and E). The results are K_AB between the legitimate end-parties (A and B) and the key K_AE that the eavesdropper E would infer on running the same key agreement process. The shared key K_AB obtained at the legitimate end-parties, A and B, is different from the key K_AE inferred by E.
 
 
 ### `quantize_reconcile_amplify_privacy`
